@@ -1,5 +1,6 @@
-const Planet = require('./planet')
-const operationPlanet = require('./operation_planet')
+import Planet from "./planet"
+import operationPlanet from "./operation_planet"
+
 let planetList = []
 
 planetList.push(new Planet('Mercúrio', 0.39))
