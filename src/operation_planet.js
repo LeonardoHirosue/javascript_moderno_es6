@@ -1,6 +1,5 @@
-export default {
-    get auInKm() { return 149587870 },    
-    convertAuToKm(au) {
-        return this.auInKm*au
-    }
+export const auInKm = 149587870
+export function convertAuToKm(au) {
+    return auInKm * au
 }
+

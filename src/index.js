@@ -1,5 +1,5 @@
 import Planet from "./planet"
-import operationPlanet from "./operation_planet"
+import { convertAuToKm } from "./operation_planet"
 
 let planetList = []
 
@@ -15,5 +15,5 @@ planetList.push(new Planet('Netuno', 30))
 planetList.forEach(planet => {
     console.log(`Planeta: ${planet.name}\n` +
                 `Distância em UA: ${planet.distanceAu}\n` +
-                `Distância em Km: ${operationPlanet.convertAuToKm(planet.distanceAu).toFixed(2)}`)
+                `Distância em Km: ${convertAuToKm(planet.distanceAu).toFixed(2)}`)
 })
