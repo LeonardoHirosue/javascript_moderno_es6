@@ -1,11 +1,7 @@
 class Planet{
-    constructor(name, surfaceArea){
+    constructor(name, distanceAu){
         this.name = name
-        this. surfaceArea = surfaceArea
-    }
-
-    rotate(){
-        console.log("Rotacionando")
+        this.distanceAu = distanceAu
     }
 }
 
