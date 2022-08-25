@@ -12,7 +12,18 @@ async function loadNeos(){
         const newNeo = new Neo(neo["id"], neo["name"], avarageEstimatedDiameter, neo["is_sentry_object"])
         neos.push(newNeo)
     })
-    console.log(neos)
+    renderNEOs(neos)
+}
+
+function renderNEOs(neos){
+    const ulElement = document.getElementById("neos-list")
+    
+    neos.forEach(neo => {
+        const liElement = document.createElement("li")
+        const isSentry = neo.isSentry ? 'Perigo de Colisão' : 'Sem perigo de colisão'
+        liElement.innerText = `${neo.id} | ${neo.name} | ${neo.avarageEstimatedDiameter} | ${isSentry}`
+        ulElement.appendChild(liElement)
+    })
 }
 
 loadNeos()
