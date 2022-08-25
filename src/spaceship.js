@@ -10,9 +10,6 @@ class Spaceship{
         return this.currentLoad * 100 / this.capacity
     }
 
-    doubleShield(){
-        return this.shield * 2
-    }
 }
 
 export default Spaceship
